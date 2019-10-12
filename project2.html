@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="./project2.css" />
+
+
+
+    <title>Project 2</title>
+  </head>
+  <body>
+    <h1> Power Factor Correction Calculator </h1>
+
+    <p class="no-line-break"> Real Power (in kilowatts): </p>
+    <input type="text" id="real-power" />
+    <br/>
+
+    <p class="no-line-break"> Original power factor (in %): </p>
+    <input type="text" id="original-power-factor" />
+    
+    <p class="no-line-break">, the current </p>
+    <select class="no-line-break" id="original-lag-lead">
+      <option value="lag"> lags </option>
+      <option value="lead"> leads </option>
+    </select>
+    <p class="no-line-break"> the voltage. </p>
+    <br/>
+
+    <p class="no-line-break"> Desired power factor (in %): </p>
+    <input type="text" id="desired-power-factor" />
+     
+    <p class="no-line-break">, the current </p>
+    <select class="no-line-break" id="desired-lag-lead">
+      <option value="lag"> lags </option>
+      <option value="lead"> leads </option>
+    </select>
+    <p class="no-line-break"> the voltage. </p>
+    <br/>
+
+    <p class="no-line-break"> Voltage (in volts rms): </p>
+    <input type="text" id="voltage" />
+    <br/>
+
+    <p class="no-line-break"> Frequency (in hertz): </p>
+    <input type="text" id="frequency" />
+    <br/>
+
+    <br/>
+    
+    <button id="calculate">Calculate</button>
+    
+    <h3> Output </h3>
+
+    <span id="output"> </span>
+
+    <p> This uses the formula: </p>
+    \[\frac{V^2}{X} = Q\]
+    <p> Where V is voltage in volts, X is reactance in ohms and Q is reactive 
+    power in Kvar. </p>
+    <p> For capacitors we have \(X = \frac{1}{2 \pi f C}\), and for inductors we
+    have \(X = 2 \pi f L\), where \(f\) is the frequency in hertz, \(C\) is the
+    capacitance in farads and \(L\) is the inductance in henrys. </p>
+
+  </body>
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <script type="text/javascript" src="./project2.js"> </script>
+</html>
